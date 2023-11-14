@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fireworks!🎆🎇</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-spe-particles-component@1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <img id="bg" src="./Stars.jpg"/>
+            </a-assets>
+            <a-entity position="0 1 0" spe-particles="
+                color: gold,green,red,blue;
+                distribution: sphere;
+                randomize-velocity: true;
+                radius: 0.3;
+                particle-count: 1000;
+                velocity: 0.2;
+                velocity-spread: 1000;
+                drag: 10;
+                max-age: 5;
+                duration: -10;
+                blending: additive;
+                active-multiplier: 1000;
+                size: 1,10,50,0
+            "></a-entity>
+            <a-camera position="0 0 1000"></a-camera>
+            <a-sky src="#bg"></a-sky>
+        </a-scene>
+    </body>
+</html>
